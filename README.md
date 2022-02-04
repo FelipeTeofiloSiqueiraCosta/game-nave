@@ -1,5 +1,4 @@
 # game-nave
-Jogo...
 
 ## Navers
 Um jogo baseado em Java Script, HTML e Css.
