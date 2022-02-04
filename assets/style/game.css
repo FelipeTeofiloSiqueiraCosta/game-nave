@@ -1,0 +1,130 @@
+@font-face {
+    font-family: GameNaveFonte;
+    src: url('../font/PressStart2P-Regular.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    max-height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+body{
+    background-image: url('../image/back.jpeg');
+    /* animation: animeBack 5s linear infinite; */
+    
+}
+body #nave{
+    position: absolute;
+    width: 70px;
+    padding: 0px 0px 0px 10px ;
+    left: -100px;
+    transition: left .6s ease-in;
+}
+body .enemy{
+    position: absolute;
+    width: 100px;
+    padding: 0px 10px;
+    transform: rotate(-90deg);
+    right: -50%;
+}
+#info{
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    height: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+#info h1,#info h3{
+    font-family: GameNaveFonte;
+    color: #fefefe;
+    margin: 0px 3px;
+}
+#info h3{
+    color: #d6d6d6;
+}
+#info h1 span, #info h3 span{
+    color: yellow;
+}
+.container{
+    width: 400px;
+    height: 300px;
+    color: #fefefe;
+    border-radius: 5px;
+    background-color: rgba(12, 12, 12, 1);
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .2s ease-in;
+    
+}
+.start{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.start h1{
+    font-family: GameNaveFonte;
+    text-align: center;
+    animation: animeTitle 2s linear alternate infinite;
+    line-height: 40px;
+}
+.start p{
+    margin: 0px 30px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+.start button{
+    position: relative;
+    background-color: rgb(201, 201, 0);
+    border: none;
+    font-family: GameNaveFonte;
+    padding: 12px 35px;
+    margin: 30px 0px;
+    transition: all .2s linear;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.start button:hover{
+    transform: scale(1.1);
+    border-radius: 2px;
+}
+
+
+@keyframes animeTitle {
+    from{
+        text-shadow: 0px 0px 0px rgb(201, 201, 0);
+    }to{
+        text-shadow: 1px 1px 15px rgb(201, 201, 0);
+    }
+}
+
+@keyframes animeBack {
+    from{
+        background-position-x: 0%;
+    }to{
+        background-position-x: 400%;
+    }
+}
+@media screen and (max-width: 980px){
+    body{
+        background-image: url('../image/back.jpeg');
+        animation: animeBack 20s linear infinite;
+    }
+}
